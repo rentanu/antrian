@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>No Antri</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="jquery.min.js" type="text/javascript"></script>
+		<script src="jquery-latest.js"></script>
+		<script language = "javascript">
+			$(document).ready(function() {
+				$(document).ready(function() {
+					$("#konten1").load("datakonten.php");
+					var refreshId = setInterval(function() {
+					$("#konten1").load('datakonten.php');
+					}, 1000);
+					$.ajaxSetup({ cache: false });
+				});
+			});	
+		</script>
+  
+  <style type="text/css">
+    .huruf-besar {
+    font-size: 50px;
+    }
+
+    .huruf-sedang {
+    font-size: 30px;
+    }
+
+    .well{
+      background-color: aqua;
+    }
+
+ </style>
+
+</head>
+<body>
+  
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>Antrian Online</h1>      
+    <p>Mengantri tanpa harus mengantri lama kapanpun dimanapun anda berada</p>
+  </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-center ">
+      <div class="well"> 
+        <h3>Puskesmas Buleleng</h3>
+        <h4>Alamat: Jalan A. Yani Singaraja</h4>
+        <p>Kontak: 0362-777333</p>
+      </div>
+    </div>
+
+    <div class="col-sm-4 text-center ">
+      <div class="well">
+        <h3>Total Antrian</h3>
+        <h1 id="konten1"></h1>
+      </div>
+
+    </div>
+
+    <div class="col-sm-4 text-center ">
+      <div class="well">
+        <h3>Antrian Sekarang</h3>        
+        <h1>100</h1>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
